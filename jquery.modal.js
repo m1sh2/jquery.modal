@@ -14,8 +14,6 @@
     }
 
 }(function($, root) {
-  const Base64 = require('js-base64').Base64;
-
   $.fn.Modal = function(message) {
 
     var _modal = this;

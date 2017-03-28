@@ -16,7 +16,5 @@
     "url": "https://github.com/m1sh2/jquery.modal/issues"
   },
   "homepage": "https://github.com/m1sh2/jquery.modal#readme",
-  "dependencies": {
-    "js-base64": "^2.1.9"
-  }
+  "dependencies": {}
 }
