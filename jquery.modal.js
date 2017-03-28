@@ -1,17 +1,21 @@
 
 // jQuery.Modal plugin
 
-(function(factory, jQuery, window) {
+(function(factory, jQuery, root) {
 
     if (typeof define === 'function' && define.amd) {
-        define(['jquery'], factory);
+        define(function() {
+          return factory(jQuery, root);
+        });
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('jquery'));
+        module.exports = factory(require('jquery'), root);
     } else {
-        factory(jQuery, window);
+        factory(jQuery, root);
     }
 
-}(function($, window) {
+}(function($, root) {
+  const Base64 = require('js-base64').Base64;
+
   $.fn.Modal = function(message) {
 
     var _modal = this;
@@ -272,7 +276,7 @@
         message.loadedFunc();
       }
 
-      $('.modal').animate({ top: $(window).scrollTop() + 100 + 'px' }, 500, function() {
+      $('.modal').animate({ top: $(root).scrollTop() + 100 + 'px' }, 500, function() {
 
       });
     }
@@ -304,7 +308,7 @@
       });
     }
 
-    window.ModalClose = ModalClose;
+    root.ModalClose = ModalClose;
 
     switch (act) {
       case 'close': {
@@ -344,9 +348,7 @@
       }
     }
 
-
-
-    $(document).off().on('click', '[rel="modal"]', function(e) {
+    $(window.document).off().on('click', '[rel="modal"]', function(e) {
       e.preventDefault();
       e.stopPropagation();
       
