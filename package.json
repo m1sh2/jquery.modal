@@ -1,0 +1,19 @@
+{
+  "name": "jquery.modal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery.modal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m1sh2/jquery.modal.git"
+  },
+  "author": "Mike Datsko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m1sh2/jquery.modal/issues"
+  },
+  "homepage": "https://github.com/m1sh2/jquery.modal#readme"
+}
