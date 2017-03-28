@@ -304,7 +304,7 @@
       });
     }
 
-    win.ModalClose = ModalClose;
+    window.ModalClose = ModalClose;
 
     switch (act) {
       case 'close': {
