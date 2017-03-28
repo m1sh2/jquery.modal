@@ -1,14 +1,14 @@
 
 // jQuery.Modal plugin
 
-(function(factory, jQuery) {
+(function(factory, jQuery, window) {
 
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
     } else if (typeof exports === 'object') {
         module.exports = factory(require('jquery'));
     } else {
-        factory(jQuery);
+        factory(jQuery, window);
     }
 
 }(function($, window) {
